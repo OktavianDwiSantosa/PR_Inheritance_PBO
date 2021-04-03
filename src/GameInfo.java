@@ -2,7 +2,7 @@
 public class GameInfo {
     private Boolean isGameOver = false;
     private Player objPlayer;
-    private Ruangan objRuangan; //ruangan aktif
+    private Ruangan objRuangan; // ruangan aktif
 
     public Ruangan getObjRuangan() {
         return objRuangan;

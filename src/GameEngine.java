@@ -4,7 +4,7 @@ public class GameEngine {
     // user interface game
     Scanner sc = new Scanner(System.in);
     Player objPlayer = new Player();
-    Ruangan objRuangan = new Ruangan(); //cuma satu ruangan
+    Ruangan objRuangan = new Ruangan(); // cuma satu ruangan
     GameInfo objGameInfo = new GameInfo();
 
     public static void main(String[] args) {
@@ -13,18 +13,17 @@ public class GameEngine {
         objGameEngine.mulai();
     }
 
-    //constructor
+    // constructor
     public GameEngine() {
-        //init ruangannya
+        // init ruangannya
         objRuangan.setObjGameInfo(objGameInfo);
         objRuangan.setDeskripsi("Ruangan kecil, dengan satu pintu dan jendela");
-        objPlayer.setRuanganAktif(objRuangan);  //set ruangan aktif player
+        objPlayer.setRuanganAktif(objRuangan); // set ruangan aktif player
         objPlayer.setObjGameInfo(objGameInfo);
 
         objGameInfo.setObjPlayer(objPlayer);
         objGameInfo.setObjRuangan(objRuangan);
     }
-
 
     private void aksi() {
         System.out.println();
@@ -36,11 +35,11 @@ public class GameEngine {
         System.out.print("Pilihan anda?");
         int pil = sc.nextInt();
         System.out.println("--");
-        if (pil==3) {
-            objGameInfo.setGameOver(true); //keluar
-        } else if (pil==1) {
+        if (pil == 3) {
+            objGameInfo.setGameOver(true); // keluar
+        } else if (pil == 1) {
             objRuangan.pilihanAksi(); //
-        } else if (pil==2) {
+        } else if (pil == 2) {
             objPlayer.pilihanAksi();
         }
     }
